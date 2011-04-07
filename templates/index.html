@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>The latest from {{ settings.SITE_NAME }}</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, Verdana, Helvetica;
+            font-size: 18px;
+            color: #000;
+            background: #76b3df;
+        }
+        .latest {
+            margin: 25px auto 0 auto;
+            width: 600px;
+            padding: 20px;
+            border-radius: 10px;
+            background: #ABD3EE; /* old browsers */
+        }
+        h1 {
+            color: #343434;
+            font-size: 20px;
+            width: 600px;
+            margin: 50px auto 0 auto;
+            text-align: center;
+        }
+        #the_tweet {
+            font-family: Georgia, "Times New Roman", serif;
+        }
+        #tweet_inner {
+            font-size: 46px;
+            line-height: 52px;
+        }
+    </style>
+</head>
+
+<body>
+<h1>The latest from {{ settings.SITE_NAME }}:</h1>
+{% for tweet in tweets %}
+<div class="latest">
+    <div id="the_tweet"><div id="tweet_inner">{{ tweet.body }} <a href="{{ tweet.link }}">{{ tweet.link }}</a></div></div>
+</div>
+{% endfor %}
+</body>
+</html>
+

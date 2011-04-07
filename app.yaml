@@ -1,0 +1,16 @@
+application: TKTK 
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /favicon.ico
+  static_dir: static/favicon.ico
+
+- url: /update/tweet/?
+  script: cron/update.py 
+  login: admin
+
+- url: /.*
+  script: views/main.py
+
