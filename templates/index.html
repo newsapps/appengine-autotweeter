@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>The latest from {{ settings.SITE_NAME }}</title>
+    <title>Latest tweets</title>
     <style type="text/css">
         body {
             font-family: Arial, Verdana, Helvetica;
@@ -35,7 +35,7 @@
 </head>
 
 <body>
-<h1>The latest from {{ settings.SITE_NAME }}:</h1>
+<h1>Latest tweets</h1>
 {% for tweet in tweets %}
 <div class="latest">
     <div id="the_tweet"><div id="tweet_inner">{{ tweet.body }} <a href="{{ tweet.link }}">{{ tweet.link }}</a></div></div>

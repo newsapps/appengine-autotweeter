@@ -12,9 +12,8 @@ class MainPage(webapp.RequestHandler):
     def get(self):
         template_dict = {}
         template_dict['tweets'] = []
-        template_dict['settings'] = settings
         
-        recent_stories = models.Story.all().fetch(10)
+        recent_stories = models.Story.gql('ORDER BY saved DESC')
         tweets = [s.tweet for s in recent_stories]
 
         for i,tweet in enumerate(tweets):
