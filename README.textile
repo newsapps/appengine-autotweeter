@@ -2,12 +2,23 @@ h1. appengine-autotweeter
 
 A simple AppEngine application for auto-tweeting from an RSS feed.
 
+h2. Setup
+
+* "Register an application with Twitter":https://dev.twitter.com/apps/new. Select "Client" for the Application Type. Select "Read & Write" for the Default Access Type.
+* Run <pre>python get_access_token.py</pre> and follow the process to retrieve a token for the Twitter account you wish to update.
+* "Generate an API key for your bit.ly account":http://bit.ly/a/account.
+* Edit settings.py and replace all TK's with the information you just gathered. Be sure to update RSS_URL to point to your feed.
+* "Register a new AppEngine Application":https://appengine.google.com/start/createapp and edit app.yaml with the application's name. 
+* Deploy!
+
 h2. Credits
 
 * httplib2: Joe Gregorio, MIT license.
 * oauth2: Leah Culver, Joe Stump, Mark Paschal, Vic Fryzel, MIT license.
 * python-bitly: Empeeric Ltd., Apache 2.0 license.
 * python-twitter: The Python-Twitter Developers, Apache 2.0 license.
+
+Development by Ryan Nagle and Christopher Groskopf.
 
 h2. License
 
