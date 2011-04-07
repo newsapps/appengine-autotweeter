@@ -8,3 +8,7 @@ h2. Credits
 * oauth2: Leah Culver, Joe Stump, Mark Paschal, Vic Fryzel, MIT license.
 * python-bitly: Empeeric Ltd., Apache 2.0 license.
 * python-twitter: The Python-Twitter Developers, Apache 2.0 license.
+
+h2. License
+
+MIT.
