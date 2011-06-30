@@ -26,13 +26,15 @@ except:
 
 import oauth2 as oauth
 
+import settings
+
 REQUEST_TOKEN_URL = 'https://api.twitter.com/oauth/request_token'
 ACCESS_TOKEN_URL  = 'https://api.twitter.com/oauth/access_token'
 AUTHORIZATION_URL = 'https://api.twitter.com/oauth/authorize'
 SIGNIN_URL        = 'https://api.twitter.com/oauth/authenticate'
 
-consumer_key    = 'fescFXii74Ow0E8y1kNCg'
-consumer_secret = 'hAv4Q2uhS5l6FjrNt0YieE0ezb7mWHcTMLMlxKknrs' 
+consumer_key    = settings.FEEDS[0]['twitter_auth']['consumer_key']
+consumer_secret = settings.FEEDS[0]['twitter_auth']['consumer_secret']
 
 if consumer_key is None or consumer_secret is None:
   print 'You need to edit this script and provide values for the'
