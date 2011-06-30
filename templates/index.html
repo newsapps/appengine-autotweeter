@@ -10,6 +10,11 @@
             color: #000;
             background: #76b3df;
         }
+        .notice {
+            color: black;
+            background: white;
+            padding: 5px;
+        }
         .latest {
             margin: 25px auto 0 auto;
             width: 600px;
@@ -35,12 +40,14 @@
 </head>
 
 <body>
+    <p class="notice">Get the source for this app at: <a href="https://github.com/newsapps/appengine-autotweeter">https://github.com/newsapps/appengine-autotweeter</a></p>
 <h1>Latest tweets</h1>
 {% for tweet in tweets %}
 <div class="latest">
     <div id="the_tweet"><div id="tweet_inner">{{ tweet.body }} <a href="{{ tweet.link }}">{{ tweet.link }}</a></div></div>
 </div>
 {% endfor %}
+    <p class="notice">Get the source for this app at: <a href="https://github.com/newsapps/appengine-autotweeter">https://github.com/newsapps/appengine-autotweeter</a></p>
 </body>
 </html>
 
